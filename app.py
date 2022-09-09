@@ -1,6 +1,9 @@
+import warnings
 import streamlit as st
 from PIL import Image
 from resnet101 import predict
+
+warnings.simplefilter('ignore')
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 st.write("")
@@ -14,5 +17,8 @@ if file_up is not None:
     st.write("Uploading...")
     labels = predict(file_up)
 
-for ii in labels:
-    st.write("Prediction (index, name)", ii[0], ", Score: ", ii[1])
+try:
+    for ii in labels:
+        st.write("Prediction: ", ii[0], ", Score: ", ii[1])
+except NameError:
+    st.write(" ")
