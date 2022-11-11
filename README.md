@@ -10,7 +10,7 @@ To clone the app to your local machine follow these steps:
     > .venv\scripts\activate
     > python -m pip install -r requirements.txt
 
-To deploy the app via Streamlit follow this steps:
+To deploy the app via Streamlit follow this step:
 
     > streamlit run app.py
 
