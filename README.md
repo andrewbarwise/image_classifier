@@ -10,9 +10,11 @@ To clone the app to your local machine follow these steps:
     > .venv\scripts\activate
     > python -m pip install -r requirements.txt
 
+To deploy the app via Streamlit follow this steps:
 
+    > streamlit run app.py
 
-To deploy the app using Docker follow these steps in the CLI:
+To deploy the app using Docker follow these steps:
     
     > docker build -t streamlit .
     > docker run -p 8501:8501 streamlit
